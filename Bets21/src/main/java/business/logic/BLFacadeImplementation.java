@@ -455,8 +455,12 @@ public class BLFacadeImplementation  implements BLFacade {
 	public boolean nlPrivilegesUser (User u) {
 		return u.getPrivilegiado();
 	}
-
+	
+	
 	@WebMethod
+	/*
+	 * 
+	 */
 	public Pronosticos createPrognostic(int e, Question q, String pronos, float porcen, Equipo eq) throws PrognosticAlreadyExist, WrongParameters {
 		dbManager.open(false);
 		Pronosticos p;

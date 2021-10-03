@@ -36,8 +36,8 @@ class CreatePrognosticTeamBLMockTest {
 
 			try {
 				// configure Mock
-				
-				Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(Equipo.class), Mockito.anyFloat())).thenThrow(new WrongParameters());
+Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(Equipo.class), Mockito.anyFloat())).
+thenThrow(new WrongParameters());
 
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
@@ -60,8 +60,8 @@ class CreatePrognosticTeamBLMockTest {
 		
 			try {
 				// configure Mock
-				
-				Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(), Mockito.any(Equipo.class), Mockito.anyFloat())).thenThrow(new WrongParameters());
+Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(), Mockito.any(Equipo.class), Mockito.anyFloat())).
+thenThrow(new WrongParameters());
 
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
@@ -78,13 +78,13 @@ class CreatePrognosticTeamBLMockTest {
 
 	}
 	@Test
-	@DisplayName("Test2: La pregunta  no se encuentra en el evento")
+	@DisplayName("Test3: La pregunta  no se encuentra en el evento")
 	void test3()     {
 		
 			try {
 				// configure Mock
-				
-				Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(Equipo.class), Mockito.anyFloat())).thenReturn(null);
+Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(Equipo.class), Mockito.anyFloat())).
+thenReturn(null);
 
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
@@ -107,8 +107,8 @@ class CreatePrognosticTeamBLMockTest {
 
 			try {
 				// configure Mock
-				
-				Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(), Mockito.anyFloat())).thenThrow(new WrongParameters());
+Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(), Mockito.anyFloat())).
+thenThrow(new WrongParameters());
 
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
@@ -134,8 +134,8 @@ class CreatePrognosticTeamBLMockTest {
 
 			try {
 				// configure Mock
-				
-				Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(), Mockito.anyFloat())).thenThrow(new PrognosticAlreadyExist());
+Mockito.when(dataAccess.createPrognosticTeam(Mockito.anyInt(), Mockito.any(Question.class), Mockito.any(), Mockito.anyFloat())).
+thenThrow(new PrognosticAlreadyExist());
 
 				// invoke System Under Test (sut)
 				String queryText = "Query Text";
