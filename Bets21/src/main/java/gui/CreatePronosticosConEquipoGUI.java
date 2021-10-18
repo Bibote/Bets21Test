@@ -132,7 +132,7 @@ public class CreatePronosticosConEquipoGUI extends JFrame {
 					jFrameLabelErrorNums.setVisible(false);
 					lblPronosticosCreados.setVisible(false);
 					lblNoseleccionesDos.setVisible(false);
-					facade.checkEmptyStrings(porcentaje);
+					if(porcentaje.length()<0)throw new StringIsEmpty();
 					float porcen = Float.parseFloat(porcentaje);
 					Question question = facade.obtainQuestion(ev, q);
 					if(chckbxEq1.isSelected() && chckbxEq2.isSelected() ) {

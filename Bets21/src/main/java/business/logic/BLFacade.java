@@ -174,7 +174,7 @@ public interface BLFacade  {
 	 * @throws UserDoesntExist Excepcion para cuando el usuario indicado no existe
 	 */
 	@WebMethod public void userLogin(int DNI, String passWord) throws UserDoesntExist, DifferentPasswords;
-
+		
 	/**
 	 * Metodo que devuelve el usuario logueado en ese momento
 	 * @return el usuario tipo User que esta logueado
@@ -192,7 +192,7 @@ public interface BLFacade  {
 	 */
 	@WebMethod public Date makeDate(Date dt);
 
-	@WebMethod public void checkEmptyStrings(String s) throws StringIsEmpty;
+
 	/**
 	 * Metodo que verifica si la fecha dada es menor a la fecha actual
 	 * @param d Date que representa la fecha 

@@ -312,4 +312,3 @@ public class UserMainGUI extends JFrame {
 		return boletos;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
-

@@ -14,6 +14,7 @@ import javax.persistence.TypedQuery;
 
 import configuration.ConfigXML;
 import domain.Equipo;
+import domain.EquipoId;
 import domain.Event;
 import domain.Pronosticos;
 import domain.Question;
@@ -103,6 +104,7 @@ public class TestUtilityDataAccess {
 		 	return res;
 		}
 		
+		
 		public boolean existQuestion(Event event, String question) {
 			System.out.println(">> DataAccess: existQuestion=> event= "+event+" question= "+question);
 			Event ev = db.find(Event.class, event.getEventNumber());
@@ -133,7 +135,8 @@ public class TestUtilityDataAccess {
 			db.getTransaction().begin();
 			db.persist(ev);
 			db.getTransaction().commit();
-			return ev;
+			db.find(Event.class, ev);
+			return db.find(Event.class, ev);
 		}
 }
 

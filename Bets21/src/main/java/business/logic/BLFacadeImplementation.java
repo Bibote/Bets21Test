@@ -379,13 +379,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 
 
-	@WebMethod
-	public void checkEmptyStrings(String s) throws StringIsEmpty {
-		if (s.length()>0) {
-			return;
-		}
-		throw new StringIsEmpty();
-	}
+
 
 	@WebMethod
 	public void oldDate (Date d)throws OldDateError{

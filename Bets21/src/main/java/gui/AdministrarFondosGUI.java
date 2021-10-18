@@ -90,10 +90,10 @@ public class AdministrarFondosGUI extends JFrame{
 		lblNewLabel_2.setBounds(35, 78, 166, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel SinTarjeta = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("NoTarSel"));
-		SinTarjeta.setBounds(266, 354, 199, 13);
-		contentPane.add(SinTarjeta);
-		SinTarjeta.setVisible(false);
+		JLabel sinTarjeta = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("NoTarSel"));
+		sinTarjeta.setBounds(266, 354, 199, 13);
+		contentPane.add(sinTarjeta);
+		sinTarjeta.setVisible(false);
 		
 		JLabel lblSeleccioneTarjeta = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("SelCard"));
 		lblSeleccioneTarjeta.setBounds(34, 103, 166, 14);
@@ -159,10 +159,10 @@ public class AdministrarFondosGUI extends JFrame{
 				String cantidad = textFieldCantidad.getText();
 				try {
 					if (modelTarjetas.getSize()==0) {
-						SinTarjeta.setVisible(true);
+						sinTarjeta.setVisible(true);
 					}else {
 						Date hoy = new Date();
-						SinTarjeta.setVisible(false);
+						sinTarjeta.setVisible(false);
 						Integer dinero = Integer.parseInt(cantidad);
 						double chutis = (double) dinero;
 						facade.makePayment(chutis,hoy,(String) modelTarjetas.getSelectedItem());
@@ -186,9 +186,9 @@ public class AdministrarFondosGUI extends JFrame{
 				String cantidad = textFieldCantidad.getText();
 				try {
 					if (modelTarjetas.getSize()==0) {
-						SinTarjeta.setVisible(true);
+						sinTarjeta.setVisible(true);
 					}else {
-						SinTarjeta.setVisible(false);
+						sinTarjeta.setVisible(false);
 						Integer dinero = Integer.parseInt(cantidad);
 						double chutis = (double) dinero;
 						facade.changeChutiUs(-chutis);

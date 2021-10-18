@@ -105,8 +105,9 @@ public class CreatePronosticosGUI extends JFrame {
 				jFrameLabelErrorCamposl.setVisible(false);
 				jFrameLabelErrorNums.setVisible(false);
 				try {
-					facade.checkEmptyStrings(pronostico);
-					facade.checkEmptyStrings(porcentaje);
+					
+					if(pronostico.length()<0) throw new StringIsEmpty();
+					if(porcentaje.length()<0) throw new StringIsEmpty();
 					float porcen = Float.parseFloat(porcentaje);
 					Question question = facade.obtainQuestion(ev, q);
 					try {

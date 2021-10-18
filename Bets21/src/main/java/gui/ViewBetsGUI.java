@@ -22,6 +22,10 @@ public class ViewBetsGUI extends JFrame {
 	private JPanel contentPane;
 	private JFrame padreFrame;
 	private BLFacade facade = PublicMainGUI.getBusinessLogic();
+	private DefaultTableModel tableModelBets; 
+	private JTable tableBets;
+	private JScrollPane scrollPane;
+
 
 	private String[] columnNamesEvents = new String[] {
 			ResourceBundle.getBundle("Etiquetas").getString("Event"),
@@ -30,10 +34,7 @@ public class ViewBetsGUI extends JFrame {
 			ResourceBundle.getBundle("Etiquetas").getString("Amount")
 
 	};
-	private DefaultTableModel tableModelBets; 
-	private JTable tableBets;
-	private JScrollPane scrollPane;
-
+	
 	/**
 	 * Launch the application.
 	 */

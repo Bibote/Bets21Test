@@ -243,7 +243,8 @@ public class CrearEventoGUI extends JFrame {
 					facade.oldDate(fechaEvento);
 					lblNewLabel_4.setVisible(false);
 					String descripcion = textField.getText();
-					facade.checkEmptyStrings(descripcion);
+					
+					if(descripcion.length()<0) throw new StringIsEmpty();
 					lblNewLabel_3.setVisible(false);
 					/**Event ev = new Event(descripcion,UtilDate.newDate(fechaEvento.getYear()+1900,fechaEvento.getMonth(),fechaEvento.getDate()));**/
 
